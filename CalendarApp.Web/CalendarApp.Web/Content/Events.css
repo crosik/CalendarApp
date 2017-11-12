@@ -1,0 +1,21 @@
+﻿#external-events {
+    justify-content: center
+}
+
+#external-events .fc-event {
+    cursor: pointer;
+    padding-top: 0.25rem;
+}
+
+#external-events p {
+    font-size: 11px;
+    color: #666;
+}
+
+#external-events p input {
+    vertical-align: middle;
+}
+
+.padding-top{
+    padding-top: 0.5rem;
+}
