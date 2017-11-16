@@ -1,10 +1,8 @@
 ﻿using CalendarApp.DbModels;
 using CalendarApp.DbModels.Tables;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 
 namespace CalendarApp.Web.Controllers
 {
@@ -17,10 +15,10 @@ namespace CalendarApp.Web.Controllers
 
         public JsonResult GetEvents()
         {
-            using(EFContext context = new EFContext())
+            using(EfContext context = new EfContext())
             {
                 var events = context.Events.ToList();
-                return new JsonResult { Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+                return new JsonResult {Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet};
             }
         }
 
@@ -28,11 +26,11 @@ namespace CalendarApp.Web.Controllers
         public JsonResult SaveEvent(Event e)
         {
             var status = false;
-            using (EFContext dc = new EFContext())
+            using (EfContext dc = new EfContext())
             {
                 if (e.EventId > 0)
                 {
-                    var v = dc.Events.Where(a => a.EventId == e.EventId).FirstOrDefault();
+                    var v = dc.Events.FirstOrDefault(a => a.EventId == e.EventId);
                     if (v != null)
                     {
                         v.Subject = e.Subject;
@@ -59,9 +57,9 @@ namespace CalendarApp.Web.Controllers
         public JsonResult DeleteEvent(int eventId)
         {
             var status = false;
-            using (EFContext dc = new EFContext())
+            using (EfContext dc = new EfContext())
             {
-                var v = dc.Events.Where(a => a.EventId == eventId).FirstOrDefault();
+                var v = dc.Events.FirstOrDefault(a => a.EventId == eventId);
                 if (v != null)
                 {
                     dc.Events.Remove(v);

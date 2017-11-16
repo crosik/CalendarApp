@@ -1,6 +1,5 @@
 namespace CalendarApp.DbModels.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
     
     public partial class event_asp_init_tables : DbMigration

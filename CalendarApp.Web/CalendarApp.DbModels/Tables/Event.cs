@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace CalendarApp.DbModels.Tables
 {
@@ -15,5 +13,11 @@ namespace CalendarApp.DbModels.Tables
         public DateTime? End { get; set; }
         public string ThemeColor { get; set; }
         public bool IsFullDay { get; set; }
+        //[ScriptIgnore]
+        //public virtual Client Client { get; set; }
+        //[ScriptIgnore]
+        //public virtual Place Place { get; set; }
+        //[ScriptIgnore]
+        //public virtual ICollection<User> Users { get; set; }
     }
 }

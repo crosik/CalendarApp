@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace CalendarApp.DbModels.Tables
 {
@@ -12,5 +9,7 @@ namespace CalendarApp.DbModels.Tables
         public string Name { get; set; }
         public string Surname { get; set; }
         public int Phonenumber { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Event> Events { get; set; }
     }
 }

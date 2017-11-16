@@ -1,18 +1,15 @@
 namespace CalendarApp.DbModels.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CalendarApp.DbModels.EFContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CalendarApp.DbModels.EfContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(CalendarApp.DbModels.EFContext context)
+        protected override void Seed(CalendarApp.DbModels.EfContext context)
         {
             //  This method will be called after migrating to the latest version.
 
