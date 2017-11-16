@@ -306,6 +306,10 @@
       <Project>{9e27c774-5c7b-4910-a518-876df1aa3907}</Project>
       <Name>CalendarApp.DbModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CalendarApp.Dto\CalendarApp.Dto.csproj">
+      <Project>{747A2B67-6454-48E4-908C-A325220B766C}</Project>
+      <Name>CalendarApp.Dto</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

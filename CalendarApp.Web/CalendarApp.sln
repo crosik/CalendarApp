@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarApp.Web", "Calendar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarApp.DbModels", "CalendarApp.DbModels\CalendarApp.DbModels.csproj", "{9E27C774-5C7B-4910-A518-876DF1AA3907}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarApp.Dto", "CalendarApp.Dto\CalendarApp.Dto.csproj", "{747A2B67-6454-48E4-908C-A325220B766C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9E27C774-5C7B-4910-A518-876DF1AA3907}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E27C774-5C7B-4910-A518-876DF1AA3907}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E27C774-5C7B-4910-A518-876DF1AA3907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{747A2B67-6454-48E4-908C-A325220B766C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747A2B67-6454-48E4-908C-A325220B766C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747A2B67-6454-48E4-908C-A325220B766C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747A2B67-6454-48E4-908C-A325220B766C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

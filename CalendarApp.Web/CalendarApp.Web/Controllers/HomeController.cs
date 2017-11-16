@@ -3,6 +3,7 @@ using CalendarApp.DbModels.Tables;
 using System.Linq;
 using System.Web.Mvc;
 using Newtonsoft.Json;
+using CalendarApp.Dto;
 
 namespace CalendarApp.Web.Controllers
 {
@@ -18,7 +19,8 @@ namespace CalendarApp.Web.Controllers
             using(EfContext context = new EfContext())
             {
                 var events = context.Events.ToList();
-                return new JsonResult {Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet};
+                var eventsDTO = EventExtension.ConvertGroup(events);
+                return new JsonResult {Data = eventsDTO, JsonRequestBehavior = JsonRequestBehavior.AllowGet};
             }
         }
 
